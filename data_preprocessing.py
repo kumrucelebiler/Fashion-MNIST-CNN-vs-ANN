@@ -1,4 +1,7 @@
-import tensorflow as tf
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+import tensorflow as tf 
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -13,7 +16,7 @@ print(f"Eğitimdeki Resim Sayısı ve Boyutu: {X_train.shape}")
 print(f"Testteki Resim Sayısı ve Boyutu: {X_test.shape}")
 # Çıktı (10000, 28, 28) olacak -> 10.000 adet test resmi.
 
-İlk resmin (0. indeksteki resim) ilk 5 satır ve 5 sütunundaki piksel değerlerine bakalım:
+#İlk resmin (0. indeksteki resim) ilk 5 satır ve 5 sütunundaki piksel değerlerine bakalım:
 print("İlk resmin sol üst köşesindeki pikseller (0-255 arası değerler):")
 print(X_train[0][:5, :5])
 
